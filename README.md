@@ -25,7 +25,7 @@
    6. User can create,read,update and destroy monster's type.<br/>
    7. User can view all their monsters and sort by name, power,or weakness.<br/>
    8. User can also search monster from admin panel.
-   9. An admin user who have all rights to mange every user's monster CRUD system,He also make new user from his admin panel(Username:a@z.com,password:admin). 
+   9. An admin user who have all rights to mange every user's monster CRUD system,He also make new user from his admin panel(Username:a@z.com,password:admin123). 
     
     
  <h3>API</h3>   
