@@ -11,8 +11,9 @@
    Step 3:<code>$ bundle install</code><br/>
    Step 4:<code>$ rake db:drop</code><br/>
    Step 5:<code>$ rake db:create</code><br/>
-   Step 6:<code>$ rake db:seed</code><br/>
-   Step 7:<code>$ rails server</code><br/>
+   Step 7:<code>$ rake db:migrate</code><br/>
+   Step 8:<code>$ rake db:seed</code><br/>
+   Step 9:<code>$ rails server</code><br/>
    
  <h3>Feature</h3>
    1. User can signup/signin by facebook.<br/>
