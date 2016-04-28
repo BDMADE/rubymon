@@ -1,0 +1,32 @@
+<% provide(:title, 'Registration') %>
+<%= render 'users/error' %>
+<div class="container">
+
+  <%= form_for @user, html: {class: "form-signin"} do |f| %>
+
+      <h2 class="form-signin-heading">Sign Up</h2>
+
+      <div class="login-wrap">
+        <div class="user-login-info">
+          <%= f.label :name %><br>
+          <%= f.text_field :name, class: 'form-control',required: 'required' %>
+          <%= f.label :email %><br>
+          <%= f.text_field :email, class: 'form-control',required: 'required' %>
+          <%= f.label :password %><br>
+          <%= f.password_field :password, class: 'form-control',required: 'required' %>
+          <%= f.label :password_confirmation %><br>
+          <%= f.password_field :password_confirmation, class: 'form-control',required: 'required' %>
+          </div>
+        <%= f.submit 'Registration', class: 'btn btn-login btn-block' %>
+
+
+        <!-- <a href="<%= root_path %>auth/facebook" name='facebook' class="btn btn-facebook btn-block">Registration with Facebook</a> -->
+
+        <div class="registration">Already Registered. <%= link_to 'Sign In', login_path %></div>
+
+      </div>
+
+
+  <% end %>
+
+</div>

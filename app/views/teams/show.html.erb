@@ -1,0 +1,30 @@
+<% provide(:title, 'Team') %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3 col-sm-6 col-lg-6 col-md-offset-3">
+    <section class="panel">
+
+      <header class="panel-heading">
+        View Team Information
+      </header>
+
+      <div class="panel-body">
+
+        <div class="position-center">
+          <p>
+            <strong>Name:</strong>
+            <%= @team.name %>
+          </p>
+
+         
+          <%= link_to 'Edit', edit_team_path(@team), class: 'btn btn-info' %> |
+          <%= link_to 'Back', teams_path, class: 'btn btn-danger' %>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+</div>

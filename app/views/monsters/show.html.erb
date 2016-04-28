@@ -1,0 +1,87 @@
+<% provide(:title, 'Monster') %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3 col-sm-6 col-lg-6 col-md-offset-3">
+    <section class="panel">
+
+      <header class="panel-heading">
+        View User Information
+      </header>
+
+      <div class="panel-body">
+
+        <div class="position-center">
+          <p>
+            <strong>Name:</strong>
+            <%= @monster.name %>
+          </p>
+
+          <% if not @monster.type.nil? %>
+          <p>
+            <strong>Type:</strong>
+            <%= @monster.type.name %>
+          </p>
+
+          <% end %>
+
+          <% if not @monster.team.nil? %>
+          <p>
+            <strong>Type:</strong>
+            <%= @monster.team.name %>
+          </p>
+
+          <% end %>
+
+          <% if not @monster.type.nil? %>
+          <p>
+            <strong>Power:</strong>
+            <% @power=@monster.type.power %>
+            
+            <% if @power==1 %>
+                        <i class="fa fa-star" aria-hidden="false"> </i>
+                    <% elsif @power==2 %>
+                        
+                        <% 2.times do %>
+                        <i class="fa fa-star" aria-hidden="false"> </i>
+                        <% end %>
+
+                    <% elsif @power==3 %>
+                        
+                        <% 3.times do %>
+                        <i class="fa fa-star" aria-hidden="false"> </i>
+                        <% end %>
+
+                    <% elsif @power==4 %>
+                        
+                        <% 4.times do %>
+                        <i class="fa fa-star" aria-hidden="false"> </i>
+                        <% end %>
+
+                    <% elsif @power==5 %>
+                        <% 5.times do %>
+                        <i class="fa fa-star" aria-hidden="false"> </i>
+                        <% end %>
+
+            <% end %>
+
+
+
+          </p>
+
+          <% end %>
+          
+
+          
+
+
+          <%= link_to 'Edit', edit_monster_path(@monster),class:'btn btn-info' %> |
+          <%= link_to 'Back', monsters_path,class: 'btn btn-danger' %>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+</div>

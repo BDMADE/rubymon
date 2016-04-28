@@ -1,0 +1,22 @@
+one:
+  id: 1
+  name: Rails Admin
+  email: a@z.com
+  password_digest: <%= User.digest('password') %>
+  admin: true
+
+two:
+  id: 2
+  name: Tanbir Hasan
+  email: t@h.com
+  password_digest: <%= User.digest('password') %>
+  admin: false
+  
+three:
+  id: 3
+  name: Azizul Haque
+  email: a@h.com
+  password_digest: <%= User.digest('password') %>
+  admin: false
+ 
+  

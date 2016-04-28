@@ -1,0 +1,20 @@
+<% if not current_user.nil? %>
+<div class="top-nav hr-top-nav">
+                  <ul class="nav pull-right top-menu">
+                      <!-- user login dropdown start-->
+                      <li class="dropdown">
+                          <a data-toggle="dropdown" class="dropdown-toggle icon-user" href="#">
+                              <i class="fa fa-user"></i>
+                              <span class="username"><%= current_user.name %></span>
+                              <b class="caret"></b>
+                          </a>
+                          <ul class="dropdown-menu extended logout">
+                              <li><a href="<%= user_path(current_user) %>"><i class=" fa fa-suitcase"></i>Profile</a></li>
+                              <li><a href="<%= edit_user_path(current_user) %>"><i class="fa fa-cog"></i> Settings</a></li>
+                              <li><a href="<%= logout_path %>"><i class="fa fa-key"></i> Log Out</a></li>
+                          </ul>
+                      </li>
+                      <!-- user login dropdown end -->
+                  </ul>
+</div>
+<% end %>

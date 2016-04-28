@@ -1,0 +1,29 @@
+<!--This parital will show sign in and sign up link in navigation bar in home page-->
+<%= content_for :nav do %>
+
+<% if current_user %>
+<ul class="nav navbar-nav navbar-right">
+<li><a href="#">Logged in as <b><%= current_user.name %></b></a></li>
+ <li><%= link_to "Admin", admin_path %></li>
+ <li><%= link_to "Log Out", logout_path %></li>
+ </ul>
+ <% else %>
+ <ul class="nav navbar-nav navbar-right">
+ <li><%= link_to "Sign In", login_path %></li>
+ <li><%= link_to "Sign Up", signup_path %></li>
+ </ul>
+ <% end %>
+
+<% end %>
+
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>Rubymon</h1>
+    <p>Rubymon is a mobile app that allows players to catch, collect monsters, and eventually
+      battle them. The game is played on a mobile app but we want to store user and monster
+      information in the cloud. We need you to create a RESTful backend API to store and
+      organize the monsters.</p>
+  </div>
+  
+</div>

@@ -1,0 +1,87 @@
+<% provide(:title, 'Monsters') %>
+<h1>Listing Monsters</h1>
+
+<div><%= link_to 'New Monster', new_monster_path, class: 'btn btn-md btn-success' %></div>
+
+
+<br>
+<div class="row">
+  <div class="col-sm-12">
+    <section class="panel">
+      <header class="panel-heading">
+        Monster Table
+      </header>
+      <div class="panel-body">
+        <div class="adv-table">
+          <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Power</th>
+              <th>Team</th>
+              <th>Action 1</th>
+              <th>Action 2</th>
+              <th>Action 3</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <% @monsters.each do |monster| %>
+                <tr>
+                  <td><%= monster.name %></td>
+                  <% if not monster.type.nil? %>
+                      <td><%= monster.type.name %></td>
+                      <td>
+
+                        <% @power=monster.type.power %>
+                        <% if @power==1 %>
+                            <i class="fa fa-star" aria-hidden="false"> </i>
+                        <% elsif @power==2 %>
+
+                            <% 2.times do %>
+                                <i class="fa fa-star" aria-hidden="false"> </i>
+                            <% end %>
+
+                        <% elsif @power==3 %>
+
+                            <% 3.times do %>
+                                <i class="fa fa-star" aria-hidden="false"> </i>
+                            <% end %>
+
+                        <% elsif @power==4 %>
+
+                            <% 4.times do %>
+                                <i class="fa fa-star" aria-hidden="false"> </i>
+                            <% end %>
+
+                        <% elsif @power==5 %>
+                            <% 5.times do %>
+                                <i class="fa fa-star" aria-hidden="false"> </i>
+                            <% end %>
+
+                        <% end %>
+
+
+                      </td>
+                  <% end %>
+
+                  <% if not monster.team.nil? %>
+                      <td><%= monster.team.name %></td>
+                  <% end %>
+
+                 <td><%= link_to 'Show', monster %></td>
+                  <td><%= link_to 'Edit', edit_monster_path(monster) %></td>
+                  <td><%= link_to 'Destroy', monster, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+                </tr>
+            <% end %>
+
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+

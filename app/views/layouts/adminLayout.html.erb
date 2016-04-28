@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<%= render 'layouts/head' %>
+<body class="full-width">
+
+  <section id="container" class="hr-menu">
+      <!--header start-->
+      <header class="header fixed-top">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle hr-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span class="fa fa-bars"></span>
+              </button>
+
+              <!--logo start-->
+              <%= render 'layouts/logo' %>
+              <!--logo end-->
+              
+              <!--horizontal menu-->
+              <%= render 'layouts/horizontal_menu' %>
+              <!--horizontal end-->
+              
+              <!--user profile start-->
+              <%= render 'layouts/user_profile' %>
+              <!--user profile end-->
+              
+
+              
+          </div>
+
+      </header>
+      <!--header end-->
+      <!--sidebar start-->
+
+      <!--sidebar end-->
+      <!--main content start-->
+      <style type="text/css">#main-content{min-height: 723px;}</style>
+      <section id="main-content">
+          <section class="wrapper">
+              <!-- page start-->
+             
+              <%= render 'layouts/flash_message' %>
+              <%= yield %>
+              
+              <!-- page end-->
+          </section>
+      </section>
+      <!--main content end-->
+      <!--footer start-->
+      <%= render 'layouts/footer' %>
+      <!--footer end-->
+  </section>
+
+  <!-- Placed js at the end of the document so the pages load faster -->
+
+  <!--Core js-->
+  <%= render 'layouts/script' %>
+  </body>
+  </html>

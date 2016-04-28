@@ -1,0 +1,60 @@
+<% provide(:title, 'Type') %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3 col-sm-6 col-lg-6 col-md-offset-3">
+    <section class="panel">
+
+      <header class="panel-heading">
+        View Type Information
+      </header>
+
+      <div class="panel-body">
+
+        <div class="position-center">
+          <p>
+            <strong>Name:</strong>
+            <%= @type.name %>
+          </p>
+
+
+          <p>
+            <% @power=@type.power %>
+             <% if @power==1 %>
+                        <i class="fa fa-star" aria-hidden="false"> </i>
+                    <% elsif @power==2 %>
+                        
+                        <% 2.times do %>
+                        <i class="fa fa-star" aria-hidden="false"> </i>
+                        <% end %>
+
+                    <% elsif @power==3 %>
+                        
+                        <% 3.times do %>
+                        <i class="fa fa-star" aria-hidden="false"> </i>
+                        <% end %>
+
+                    <% elsif @power==4 %>
+                        
+                        <% 4.times do %>
+                        <i class="fa fa-star" aria-hidden="false"> </i>
+                        <% end %>
+
+                    <% elsif @power==5 %>
+                        <% 5.times do %>
+                        <i class="fa fa-star" aria-hidden="false"> </i>
+                        <% end %>
+
+                    <% end %>
+
+          </p>
+          <%= link_to 'Edit', edit_type_path(@type),class:'btn btn-info' %> |
+          <%= link_to 'Back', types_path,class: 'btn btn-danger' %>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+</div>

@@ -1,0 +1,77 @@
+<% provide(:title, 'All Types') %>
+<h1>Listing Types</h1>
+
+<div><%= link_to 'New Type', new_type_path, class: 'btn btn-md btn-success' %></div>
+
+
+<br>
+<div class="row">
+  <div class="col-sm-12">
+    <section class="panel">
+      <header class="panel-heading">
+        Type Table
+      </header>
+      <div class="panel-body">
+        <div class="adv-table">
+          <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <thead>
+            <tr>
+              <th>Name</th>
+
+              <th>Power</th>
+
+              <th>Action 1</th>
+              <th>Action 2</th>
+              <th>Action 3</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <% @types.each do |type| %>
+                <tr>
+                  <td><%= type.name %></td>
+                  <td>
+                    <% @power=type.power %>
+                    <% if @power==1 %>
+                        <i class="fa fa-star" aria-hidden="false"> </i>
+                    <% elsif @power==2 %>
+                        
+                        <% 2.times do %>
+                        <i class="fa fa-star" aria-hidden="false"> </i>
+                        <% end %>
+
+                    <% elsif @power==3 %>
+                        
+                        <% 3.times do %>
+                        <i class="fa fa-star" aria-hidden="false"> </i>
+                        <% end %>
+
+                    <% elsif @power==4 %>
+                        
+                        <% 4.times do %>
+                        <i class="fa fa-star" aria-hidden="false"> </i>
+                        <% end %>
+
+                    <% elsif @power==5 %>
+                        <% 5.times do %>
+                        <i class="fa fa-star" aria-hidden="false"> </i>
+                        <% end %>
+
+                    <% end %>
+
+
+                  </td>
+
+                  <td><%= link_to 'Show', type %></td>
+                  <td><%= link_to 'Edit', edit_type_path(type) %></td>
+                  <td><%= link_to 'Destroy', type, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+                </tr>
+            <% end %>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
