@@ -7,9 +7,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.create(name:'Rails Admin',email: 'a@z.com',password:'admin123',password_confirmation:'admin123',admin:true)
-Type.create(name:'Fire',power:5)
-Type.create(name:'Water',power:4)
+Type.create(name:'Fire',power:1)
+Type.create(name:'Water',power:2)
 Type.create(name:'Earth',power:3)
-Type.create(name:'Electric',power:2)
-Type.create(name:'Wind',power:1)
+Type.create(name:'Electric',power:4)
+Type.create(name:'Wind',power:5)
 

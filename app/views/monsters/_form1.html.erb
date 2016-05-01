@@ -38,7 +38,7 @@
             
             <div class="form-group">
 
-              <%= f.label :type,class: 'col-lg-3 col-sm-4 control-label' %>
+              <%= f.label :type_id,class: 'col-lg-3 col-sm-4 control-label' %>
               <div class="col-lg-9 col-sm-8">
                 <% if Type.all.empty? %>
                  <%= link_to 'Create Type At First',new_type_path,class:'btn btn-warning' %>
@@ -52,9 +52,9 @@
 
             <div class="form-group">
 
-              <%= f.label :team,class: 'col-lg-3 col-sm-4 control-label' %>
+              <%= f.label :team_id_id,class: 'col-lg-3 col-sm-4 control-label' %>
               <div class="col-lg-9 col-sm-8">
-                <% if current_user.teams.empty? %>
+                <% if Team.all.empty? %>
                     <%= link_to 'Create Team At First',new_team_path,class:'btn btn-danger' %>
                     <% else %>
                 <%= f.collection_select :team_id,current_user.teams,:id, :name, {prompt: true},{class:'form-control'} %>
